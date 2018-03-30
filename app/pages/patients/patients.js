@@ -186,6 +186,7 @@ export let Patients = translate()(React.createClass({
   },
 
   renderPatients: function() {
+    const { t } = this.props;
     if (!this.hasPatients()) {
       return null;
     }
@@ -215,7 +216,7 @@ export let Patients = translate()(React.createClass({
     return (
       <div className="container-box-inner patients-section js-patients-shared">
         <div className="patients-section-title-wrapper">
-          <div className="patients-section-title">{"View data for:"}</div>
+          <div className="patients-section-title">{t("View data for:")}</div>
         </div>
         <div className="patients-section-content">
           {this.renderAddDataStorage()}

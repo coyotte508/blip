@@ -162,12 +162,13 @@ export let PatientData = translate()(React.createClass({
   },
 
   renderEmptyHeader: function() {
+    const { t } = this.props;
     return (
       <Header
         chartType={'no-data'}
         inTransition={false}
         atMostRecent={false}
-        title={'Data'}
+        title={t('Data')}
         ref="header" />
       );
   },

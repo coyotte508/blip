@@ -132,6 +132,7 @@ export var UserProfile = translate()(React.createClass({
   },
 
   renderForm: function() {
+    const {t} = this.props;
     var disabled = this.isResettingUserData();
 
 
@@ -140,7 +141,7 @@ export var UserProfile = translate()(React.createClass({
         inputs={this.formInputs()}
         formValues={this.state.formValues}
         validationErrors={this.state.validationErrors}
-        submitButtonText="Save"
+        submitButtonText={' ' + t('Save')}
         onSubmit={this.handleSubmit}
         notification={this.state.notification}
         disabled={disabled}/>
