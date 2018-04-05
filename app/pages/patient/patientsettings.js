@@ -132,16 +132,11 @@ export default translate()(class PatientSettings extends Component {
 
     return (
       <Trans className="PatientSettings">
-        <div className="PatientPage-sectionTitle">My target range <span className="PatientPage-sectionTitle--lowercase">is</span></div>
+        <div className="PatientPage-sectionTitle">{t('My target range')} <span className="PatientPage-sectionTitle--lowercase">{t('is')}</span></div>
         <div className="PatientInfo-content">
           <div className="PatientInfo-head">
             <div className="PatientSettings-blocks">
-              <div className="PatientInfo-blockRow">
-                Above
-                {lowNode}
-                and below
-                {highNode}
-                {resetNode}
+              <div className="PatientInfo-blockRow">{t('Above {lowNode} and below {highNode} {resetNode}')}
               </div>
             </div>
             {errorNode}
