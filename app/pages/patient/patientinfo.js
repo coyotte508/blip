@@ -383,7 +383,7 @@ var PatientInfo = translate()(React.createClass({
   renderBgUnitSettings: function() {
     return (
       <Trans className="PatientPage-bgUnitSettings">
-        <div className="PatientPage-sectionTitle">The units I use are</div>
+        <div className="PatientPage-sectionTitle">{t('The units I use are')}</div>
         <div className="PatientInfo-content">
           <PatientBgUnits
             editingAllowed={this.isEditingAllowed(this.props.permsOfLoggedInUser)}
